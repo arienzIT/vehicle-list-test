@@ -2,6 +2,7 @@
 
 .vehicle-card {
   display: flex;
+  width: 100%;
 
   @include mq(medium) {
     flex-direction: column;

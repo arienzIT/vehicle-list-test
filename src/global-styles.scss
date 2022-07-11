@@ -16,6 +16,12 @@ html * {
 
 body,
 dd,
-dl {
+dl ,
+ul {
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
