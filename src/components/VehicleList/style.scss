@@ -14,4 +14,23 @@
   &__item {
     display: flex;
   }
+
+
+  @include mq(medium) {
+
+    &__item:nth-child(2n) .vehicle-card__content {
+      border-right-width: 0;
+    }
+  }
+
+  @include mq(large) {
+
+    &__item:nth-child(2n) .vehicle-card__content {
+      border-right-width: 1px;
+    }
+
+    &__item:nth-child(4n) .vehicle-card__content {
+      border-right-width: 0;
+    }
+  }
 }
