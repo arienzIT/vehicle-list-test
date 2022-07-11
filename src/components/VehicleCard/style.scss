@@ -1,0 +1,66 @@
+@import "src/styles/breakpoints";
+
+.vehicle-card {
+  display: flex;
+
+  @include mq(medium) {
+    flex-direction: column;
+  }
+
+  &__image {
+    flex-basis: 25%;
+
+    img {
+      aspect-ratio: 1;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+
+    @include mq(medium) {
+      align-items: center;
+      border-right: 1px solid lightgray;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+
+    @include mq(medium) {
+      border-bottom: 1px solid currentColor;
+      border-top: 1px solid currentColor;
+      margin-bottom: 24px;
+      padding: 8px 0;
+    }
+  }
+
+  &__price {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 12px;
+    justify-self: flex-end;
+  }
+
+  &__price,
+  &__description {
+    color: #777a7e;
+  }
+}

@@ -1,3 +1,13 @@
-.VehicleList {
-  width: 100%;
+@import "src/styles/breakpoints";
+
+.vehicle-list {
+  display: grid;
+
+  @include mq(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
